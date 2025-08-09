@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
+
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
+  
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Catamaran', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: white;
+  background-color: rgb(68, 32, 5);
+}
+
+/* konten */
+.konten{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  position: relative;
+  min-height: 100vh;
+}
+
+.video-bg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+
+.konten-2{
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  gap: 1em;
+  padding: 2em;
+}
+
+.profile-wrapper {
+  overflow: hidden; /* Hilangkan scrollbar */
+  width: 100%;
+}
+
+.profile-content {
+  display: flex;
+  gap: 10px;
+  animation: slide 20s linear infinite;
+}
+
+.profile-content img {
+  width: 350px;
+  border-radius: 35px;
+  flex-shrink: 0; /* Biar tidak mengecil */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+  
+/* ===== FOOTER ===== */
+.footer {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.footer-content {
+  background-color: black;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-main {
+  margin: 10px 20px;
+}
+
+.footer-main h2 {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.footer-main p {
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+}
+
+.social-links {
+  margin: 15px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.social-links a {
+  padding: 5px;
+  background-color: #dbd8e3;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+.social-links a i {
+  margin: 2px;
+  font-size: 1.1rem;
+  color: #201e1e;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 40px 20px;
+}
+
+.links p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.links a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #dbd8e3;
+  transition: 0.5s all;
+}
+
+.links a:hover {
+  color: #303035;
+}
+
+/* Tambahkan di paling bawah CSS */
+@media screen and (max-width: 768px) {
+  
+  /* Konten pertama */
+  .konten {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .img-konten {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .video-bg {
+    object-fit: cover;
+  }
+
+  /* Konten-2 jadi bertumpuk */
+  .konten-2 {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .konten-2 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Profile slider tetap tapi lebih kecil */
+  .profile-content img {
+    width: 200px;
+  }
+
+  .links {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
