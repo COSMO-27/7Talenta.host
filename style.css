@@ -42,7 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgb(0, 0, 0, 0.8);
+  background-color: rgb(0, 0, 0, 0.3);
   position: relative;
   min-height: 100vh;
 }
@@ -91,8 +91,7 @@ body {
   }
 }
 
-  
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
   width: 100%;
   margin-top: 2em;
@@ -100,77 +99,89 @@ body {
 
 .footer-content {
   background-color: black;
-  padding: 0;
-  width: 100%;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
+/* Sponsor Section */
+.sponsor-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sponsor-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.sponsor-logos img {
+  width: 80px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* D.Mart Section */
 .footer-main {
-  margin: 10px 20px;
+  text-align: center;
+  max-width: 500px;
 }
 
 .footer-main h2 {
-  color: #fff;
   font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .footer-main p {
-  color: #fff;
-  font-size: 0.8rem;
-  line-height: 1.3rem;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 .social-links {
-  margin: 15px 0;
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 15px;
 }
 
-.social-links a {
-  padding: 5px;
-  background-color: #dbd8e3;
-  border-radius: 5px;
-  transition: 0.5s;
-  text-decoration: none;
+.social-links img {
+  width: 30px;
+  height: 30px;
 }
 
-.social-links a:hover {
-  opacity: 0.7;
+/* Responsive */
+@media (max-width: 480px) {
+  .sponsor-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sponsor-section h1 {
+    font-size: 1.4rem;
+  }
 }
 
-.social-links a i {
-  margin: 2px;
-  font-size: 1.1rem;
-  color: #201e1e;
+
+
+hr {
+  margin: 40px 0; /* atas & bawah 40px, kiri & kanan 0 */
+  border: none;
+  border-top: 2px solid #ccc; /* biar garisnya rapi */
 }
 
-.links {
+.dokumentasi-talenta{
+  justify-content: center;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  width: 200px;
-  margin: 40px 20px;
-}
-
-.links p {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.links a {
-  font-size: 0.8rem;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #dbd8e3;
-  transition: 0.5s all;
-}
-
-.links a:hover {
-  color: #303035;
+  gap: 2em;
 }
 
 /* Tambahkan di paling bawah CSS */
@@ -212,4 +223,57 @@ body {
     width: 100%;
     margin: 20px 0;
   }
+
+  /* HP sedang */
+@media (max-width: 768px) {
+  .img-konten {
+    max-width: 80%;
+  }
 }
+
+/* HP kecil banget */
+@media (max-width: 500px) {
+  .img-konten {
+    max-width: 60%;
+  }
+}
+}
+
+.text{
+  display: flex;
+  gap: 0.5em;
+  margin-left: 2em;
+}
+
+.text img{
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .text {
+    flex-direction: column; /* Teks di atas, gambar di bawah */
+    text-align: center;     /* Rata tengah teks */
+    font-size: small;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .text img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px){
+  .dokumentasi-talenta video{
+    display: block;
+    width: 150px;
+    height: auto;
+  }
+}
+
+
