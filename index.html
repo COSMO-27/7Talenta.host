@@ -16,15 +16,17 @@
   
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
  <div class="konten">
     <img src="images/haiakusore.png" alt="7Talenta" width="400" class="img-konten">
     <video class="video-bg" src="video/Final.mp4" autoplay loop muted></video>
  </div>
- <div class="konten-2">
+ <div class="konten-2" data-aos="fade-right">
   <img src="images/talenta.jpg" alt="poster" width="350">
- <div>
+ <div data-aos="fade-up">
   <h1>7 TALENTA</h1>
   <p>adalah sebuah acara istimewa yang memadukan pesona pertunjukan tari tradisional dengan pameran karya kreatif anak-anak D.Mart.<br>
     Tidak hanya itu, pengunjung juga akan mendapatkan wawasan berharga melalui webinar inspiratif yang dibawakan oleh para pembicara pilihan.<br>
@@ -33,13 +35,13 @@
   </div>
  </div>
 
- <div class="text">
+ <div class="text" data-aos="fade-up">
  <h1>Profil Teman-Teman</h1>
  <img src="images/haiakusore.png" alt="">
 </div>
 
- <div class="profile-wrapper">
-  <div class="profile-content">
+ <div class="profile-wrapper" data-aos="zoom-in">
+  <div class="profile-content" loading="lazy">
     <img src="images/profile/1.png" alt="">
     <img src="images/profile/2.png" alt="">
     <img src="images/profile/3.png" alt="">
@@ -58,16 +60,13 @@
   </div>
 </div>
 
+
 <hr>
 <h1 style="justify-content: center; text-align: center;"> DOKUMENTASI LAINNYA</h1>
-<div class="dokumentasi-talenta">
+<div class="dokumentasi-talenta" data-aos="fade-up">
 <video src="video/topeng.mp4" autoplay muted loop width="450"></video>
 <video src="video/WhatsApp Video 2025-08-07 at 20.19.38.mp4" autoplay muted loop width="450"></video>
 </div>
-
-  <!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer-content">
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
@@ -104,3 +103,13 @@
 
   </div>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  })
+</script>
+</body>
+</html>
+
